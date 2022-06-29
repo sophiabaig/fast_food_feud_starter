@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "build": "vite build",
-    "dev": "vite dev"
+    "dev": "vite dev",
+    "debug": "vite dev --debug"
   },
   "dependencies": {
     "instant-noodles": "^0.0.3",

@@ -10,8 +10,9 @@ export function testStateAndEventHandlers(App) {
     render,
     fireEvent,
     cleanup,
+    // customQueries,
     bootstrapTestSuiteContext,
-    //
+    // within
   } = configureSpecSuiteWithUtils(App)
 
   const FeatureTestSuite = suite("FEATURE 004: Using the `onClick` handlers to modify React state")

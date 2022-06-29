@@ -8,10 +8,10 @@ export function testIteration(App) {
     suite,
     render,
     cleanup,
+    // fireEvent,
     customQueries,
     bootstrapTestSuiteContext,
     within,
-    //
   } = configureSpecSuiteWithUtils(App)
 
   const FeatureTestSuite = suite(`FEATURE 002: Iteration in JSX`)

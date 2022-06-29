@@ -8,9 +8,10 @@ export function testPropsAndStyles(App) {
     assert,
     suite,
     render,
+    // fireEvent,
     cleanup,
+    // customQueries,
     bootstrapTestSuiteContext,
-    //
   } = configureSpecSuiteWithUtils(App)
 
   const FeatureTestSuite = suite("FEATURE 003: The `Chip` component and using props to customize styles")

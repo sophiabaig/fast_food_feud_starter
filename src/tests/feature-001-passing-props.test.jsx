@@ -8,10 +8,10 @@ export function testPassingProps(App) {
     suite,
     render,
     cleanup,
+    // fireEvent,
     customQueries,
     bootstrapTestSuiteContext,
     within,
-    //
   } = configureSpecSuiteWithUtils(App)
 
   const FeatureTestSuite = suite(`FEATURE 001: The \`Header\` component`)
@@ -23,6 +23,7 @@ export function testPassingProps(App) {
       singleComponentNames: [
         "Header",
         "Instructions",
+        // "NutritionLabel",
       ],
       multiComponentNames: ["Chip"],
     })
