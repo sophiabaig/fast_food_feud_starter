@@ -1,10 +1,11 @@
 import * as React from "react"
+import { Dataset } from "./data/dataset"
+import "./App.css"
+
 import Header from "./components/Header/Header"
 import Instructions from "./components/Instructions/Instructions"
 import Chip from "./components/Chip/Chip"
 import NutritionalLabel from "./components/NutritionalLabel/NutritionalLabel"
-import { Dataset } from "./data/dataset"
-import "./App.css"
 
 // don't move this!
 export const appInfo = {
@@ -49,12 +50,7 @@ export function App() {
           <h2 className="title">Categories</h2>
           {categories.map((category) => {
             return (
-              <Chip
-                key={category}
-                label={category}
-                onClick={() => selectCategory(category)}
-                isActive={selectedCategory === category}
-              />
+              <Chip key={category} label={category} isActive={selectedCategory == category} onClick={() => selectCategory(category)}/>
             )
           })}
         </div>
@@ -63,12 +59,7 @@ export function App() {
       {/* MAIN COLUMN */}
       <div className="container">
         {/* HEADER */}
-        <Header
-          title={appInfo.title}
-          tagline={appInfo.tagline}
-          description={appInfo.description}
-          dataSource={appInfo.dataSource}
-        />
+        <Header title={appInfo.title} tagline={appInfo.tagline} description={appInfo.description}/>
 
         {/* RESTAURANTS ROW */}
         <div className="RestaurantsRow">
@@ -76,12 +67,7 @@ export function App() {
           <div className="restaurants options">
             {restaurants.map((restaurant) => {
               return (
-                <Chip
-                  key={restaurant}
-                  label={restaurant}
-                  onClick={() => selectRestaurant(restaurant)}
-                  isActive={selectedRestaurant === restaurant}
-                />
+                <Chip key={restaurant} label={restaurant} isActive={selectedRestaurant == restaurant} onClick={() => selectRestaurant(restaurant)}/>
               )
             })}
           </div>
@@ -95,13 +81,8 @@ export function App() {
           {/* MENU ITEM BUTTONS */}
           <div className="MenuItemButtons menu-items">
             <h2 className="title">Menu Items</h2>
-            {currentMenuItems.map((item, i) => (
-              <Chip
-                key={`${item.item_name}-${i}`}
-                label={item.item_name}
-                onClick={() => setSelectedItem(item)}
-                isActive={selectedItem && selectedItem.item_name === item.item_name}
-              />
+            {currentMenuItems.map((item) => (
+              <Chip key={item.item_name} label={item.item_name} isActive={selectedItem && selectedItem.item_name === item.item_name} onClick={() => setSelectedItem(item)}/>
             ))}
           </div>
 

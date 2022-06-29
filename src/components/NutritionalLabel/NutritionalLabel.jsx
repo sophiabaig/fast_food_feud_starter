@@ -8,8 +8,7 @@ export function NutritionalLabel(props) {
   return (
     <div className="nutritional-label">
       <h3 className="title">Nutrition Facts</h3>
-
-      <h4 className="item-name">{item?.item_name}</h4>
+      <h4 className="item-name">{item.item_name}</h4>
 
       <ul className="fact-list">
         {nutritionFacts.map((fact) => {
